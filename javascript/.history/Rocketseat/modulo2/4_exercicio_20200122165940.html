@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Estudo Js</title>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="nome">
+            <button onClick="adicionar()">Adicionar</button>
+        </div>
+        <div>
+            <ul id="lista_nomes">
+
+            </ul>
+        </div>
+    </body>
+</html>
+
+<script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    nomes.forEach(addNomeLista);
+
+    function addNomeLista(element){
+        html_nome = '<li>'+element+'</li>';
+        document.getElementById("lista_nomes").innerHTML += html_nome;
+    }
+
+    function adicionar(){
+        var nome_element = document.getElementById("nome");
+        addNomeLista(nome_element.value);
+        nome_element.value = "";
+    }
+</script>

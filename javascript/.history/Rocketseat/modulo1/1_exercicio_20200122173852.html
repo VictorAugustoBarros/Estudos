@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Estudo Js</title>
+    </head>
+    <body>
+        <div>
+            <button onclick="addQuadrado()">Novo Quadrado</button>
+        </div>
+        <br>
+        <div id="quadrados">
+
+        </div>
+    </body>
+</html>
+
+<style>
+    .quadrado{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+</style>
+
+<script>
+    function addQuadrado(){
+        html_quadrado = "<div class='quadrado'></div><br>"
+        document.getElementById("quadrados").innerHTML += html_quadrado;
+    }
+</script>

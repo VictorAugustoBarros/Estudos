@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Estudo Js</title>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+<script>
+    var usuarios = [
+        {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+    ];
+
+    function createMessage(usuarios){
+        var message = []
+        for (user of usuarios){
+             message.push("O " + user['nome'] + 'possui as habilidades ' + user['habilidades'].join(','))
+        }
+
+        return message;
+    }
+
+    var messages = createMessage(usuarios)
+    console.log(messages);
+    
+</script>

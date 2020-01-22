@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Estudo Js</title>
+    </head>
+    <body>
+        <div>
+            <label>Números Pares entre 32 -> 321</label>    
+        </div>
+        <br>
+        <div id="pares">
+            
+        </div>
+    </body>
+</html>
+
+<script>
+    function pares(x, y) {
+        var listElement =  document.querySelector("#pares");
+        
+        for (i = x; i < y; i+=2){
+            var todoElement = document.createElement('li');
+            var todoText = document.createTextNode(i);
+            todoElement.appendChild(todoText);
+            listElement.appendChild(todoElement);
+        }
+    }
+
+    pares(32, 321);
+
+</script>

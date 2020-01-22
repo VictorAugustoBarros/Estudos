@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Estudo Js</title>
+    </head>
+    <body>
+        <div>
+            <button onclick="addQuadrado()">Novo Quadrado</button>
+        </div>
+        <br>
+        <div id="quadrados">
+
+        </div>
+    </body>
+</html>
+
+<style>
+    .quadrado{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+</style>
+
+<script>
+    function addQuadrado(){
+        html_quadrado = '<div class="quadrado" onmouseover="changeColor(this)"></div><br>'
+        document.getElementById("quadrados").innerHTML += html_quadrado;
+    }
+
+    function changeColor(element){
+        var newColor = getRandomColor();
+        element.style.backgroundColor = newColor;
+    }
+
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>
